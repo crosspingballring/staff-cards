@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card</title>
+    <style>
+        :root {
+            --primary-brand: #E05829;
+            --secondary-brand: #7D8389;
+            --bg-light: #F4F6F8;
+            --surface-white: #FFFFFF;
+        }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background-color: var(--bg-light); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            padding: 20px;
+        }
+        .card { 
+            background: var(--surface-white); 
+            width: 100%;
+            max-width: 360px; 
+            border-radius: 24px; 
+            box-shadow: 0 12px 40px rgba(125, 131, 137, 0.15); 
+            text-align: center; 
+            overflow: hidden; 
+            padding-bottom: 35px; 
+        }
+        .header-bg { 
+            background: linear-gradient(135deg, var(--primary-brand), #B83D1B); 
+            height: 130px; 
+        }
+        h1 { 
+            margin: 40px 0 6px; 
+            color: #1A1A1A; 
+            font-size: 24px; 
+            font-weight: 700;
+        }
+        .title { 
+            color: var(--secondary-brand); 
+            font-size: 14px; 
+            font-weight: 600;
+            text-transform: uppercase; 
+            letter-spacing: 1.2px; 
+            margin-bottom: 25px; 
+        }
+        .info-link { 
+            display: flex;
+            align-items: center;
+            margin: 12px 24px; 
+            padding: 14px 18px; 
+            background: var(--bg-light); 
+            color: #2D3748; 
+            text-decoration: none; 
+            border-radius: 14px; 
+            font-weight: 500; 
+            font-size: 15px;
+            transition: all 0.2s ease; 
+            border: 1px solid transparent;
+        }
+        .info-link:hover { 
+            background: var(--surface-white); 
+            border-color: var(--secondary-brand);
+            transform: translateY(-1px);
+        }
+        .info-link span {
+            margin-right: 12px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header-bg"></div>
+        <h1>Wolvo</h1>
+        <div class="title">Staff Member</div>
+        
+        <a href="tel:+60123456789" class="info-link"><span>📞</span> +60 12-345 6789</a>
+        <a href="mailto:wolvo@yourcompany.com" class="info-link"><span>✉️</span> wolvo@yourcompany.com</a>
+        <a href="https://linkedin.com" class="info-link"><span>🔗</span> Connect on LinkedIn</a>
+    </div>
+</body>
+</html>
