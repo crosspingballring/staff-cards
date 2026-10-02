@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFA Business Card</title>
+    <title>Business Card</title>
     <style>
         :root {
             --primary-brand: #E05829;
@@ -35,15 +35,30 @@
             background: linear-gradient(135deg, var(--primary-brand), #B83D1B); 
             height: 130px; 
         }
+        .avatar { 
+            width: 110px; 
+            height: 110px; 
+            border-radius: 50%; 
+            border: 5px solid var(--surface-white); 
+            margin-top: -55px; 
+            object-fit: cover; 
+            background-color: var(--surface-white);
+        }
         h1 { 
-            margin: 40px 0 6px; 
+            margin: 15px 0 4px; 
             color: #1A1A1A; 
             font-size: 24px; 
             font-weight: 700;
         }
-        .title { 
+        .position { 
+            color: #1A1A1A; 
+            font-size: 15px; 
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        .department { 
             color: var(--secondary-brand); 
-            font-size: 14px; 
+            font-size: 13px; 
             font-weight: 600;
             text-transform: uppercase; 
             letter-spacing: 1.2px; 
@@ -59,7 +74,8 @@
             text-decoration: none; 
             border-radius: 14px; 
             font-weight: 500; 
-            font-size: 15px;
+            font-size: 14px;
+            text-align: left;
             transition: all 0.2s ease; 
             border: 1px solid transparent;
         }
@@ -71,18 +87,47 @@
         .info-link span {
             margin-right: 12px;
             font-size: 18px;
+            flex-shrink: 0;
+        }
+        .btn-save { 
+            display: block; 
+            margin: 28px 24px 0; 
+            padding: 16px; 
+            background-color: var(--primary-brand); 
+            color: var(--surface-white); 
+            text-decoration: none; 
+            border-radius: 16px; 
+            font-weight: 700; 
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 20px rgba(224, 88, 41, 0.3); 
+            transition: all 0.2s ease;
+        }
+        .btn-save:hover { 
+            background-color: #B83D1B;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(224, 88, 41, 0.4); 
         }
     </style>
 </head>
 <body>
     <div class="card">
         <div class="header-bg"></div>
-        <h1>Mr Wolvorine</h1>
-        <div class="title">Staff Member</div>
+        <img src="company-cards/assets/wolvo.jpg" alt="Profile Portrait" class="avatar">
         
-        <a href="tel:+60123456789" class="info-link"><span>📞</span> +60 12-345 6789</a>
-        <a href="mailto:wolvo@afa.group" class="info-link"><span>✉️</span> wolvo@afa.group</a>
-        <a href="https://afa.group/" class="info-link"><span>🔗</span> AFA Group</a>
+        <!-- Profile Hierarchy -->
+        <h1>Wolvo</h1>
+        <div class="position">Senior Executive</div>
+        <div class="department">Operations Department</div>
+        
+        <!-- Contact Links in Order -->
+        <a href="mailto:wolvo@yourcompany.com" class="info-link"><span>✉️</span> wolvo@yourcompany.com</a>
+        <a href="tel:+60312345678" class="info-link"><span>📞</span> +603-1234 5678 (Ext: 402)</a>
+        <a href="https://google.com" target="_blank" class="info-link"><span>📍</span> Level 12, Corporate Tower, Kuala Lumpur</a>
+        <a href="https://yourcompany.com" target="_blank" class="info-link"><span>🌐</span> Visit Our Website</a>
+        
+        <!-- Action Button -->
+        <a href="company-cards/assets/wolvo.vcf" class="btn-save" download>Save to Contacts</a>
     </div>
 </body>
 </html>
